@@ -160,25 +160,25 @@
     border: 1px solid #f4cb08;
 }
 
-.special-container, .step-container, .testimonial-container, .brand-container{
+.special-container, .step-container, .testimonial-container, .brand-container, .blog-container, .footer-container{
     max-width: 1600px;
     margin: 0 auto;
 }
-.special-title, .step-title, .testimonial-title{
+.special-title, .step-title, .testimonial-title, .blog-title{
     text-align: center;
     margin: 0 auto auto auto;
     padding: 3rem 0 3rem 0;
 }
-.special-title h1, .step-title h1, .testimonial-title h1{
+.special-title h1, .step-title h1, .testimonial-title h1, .blog-title h1{
     text-transform: uppercase;
     position: relative;
     margin: 15px 0 40px 0;
 }
-.special-title h2, .step-title h2, .testimonial-title h2{
+.special-title h2, .step-title h2, .testimonial-title h2, .blog-title h2{
     font-size: 1rem;
     color: #f4cb08;
 }
-.special-title h1::before, .testimonial-title h1::before{
+.special-title h1::before, .testimonial-title h1::before, .blog-title h1::before{
     content: '';
     bottom: -20px;
     left: 50%;
@@ -409,9 +409,72 @@
     padding: 2rem;
 }
 .brand-container div{
+    margin: 0 auto;
+}
+
+.blog-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+}
+.blog-grid{
+    margin: 0 auto;
+}
+.blog-grid div:nth-child(3) p{
+    color: lightslategray;
+}
+.blog-grid div:nth-child(4) p{
+    color: black;
+}
+.blog-grid div:nth-child(2) h1{
+    text-transform: uppercase;
+}
+.blog-grid div{
+    margin-bottom: 20px;
+}
+.blog-grid a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+.blog-grid a::before{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.footer{
+    background-color: #f4cb08;
+}
+.footer-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 5rem;
+}
+.footer-title h1{
+    font-size: 3rem;
+    color: aliceblue;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.footer-button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-weight: bold;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+.footer-button{
+    align-self: flex-start;
+    margin-top: 10px;
 }
 @media screen and (max-width: 1024px) {
     .container{
@@ -472,6 +535,28 @@
         grid-template-rows: repeat(2, 1fr);
         padding: 1rem;
     }
+    .portfolio-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .blog-grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-container div{
+        margin-bottom: 10px;
+    }
+    .footer-title h1{
+        font-size: 1.5rem;
+    }
+    .footer-button{
+        align-self: center;
+        margin-top: 0;
+    }
 }
 @media screen and (max-width: 600px) {
     .man img{
@@ -521,5 +606,11 @@
     .brand-container{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+    }
+    .blog-grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-title h1{
+        font-size: 1.2rem;
     }
 }
