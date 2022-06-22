@@ -557,6 +557,9 @@
         align-self: center;
         margin-top: 0;
     }
+    .blog-img img{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 600px) {
     .man img{
