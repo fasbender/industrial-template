@@ -8,7 +8,7 @@
 
 .banner{
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/banner.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -275,7 +275,7 @@
 }
 
 .stats{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-total.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/bg-total.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
